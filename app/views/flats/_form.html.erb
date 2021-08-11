@@ -1,0 +1,8 @@
+<%= simple_form_for flat do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :description, input_html: { minlength:100} %>
+<%= f.input :price_per_night, as: :numeric, input_html: {min: '1'} %>
+<%= f.input :number_of_guests, as: :numeric, input_html: {min: '1'} %>
+<%= f.submit class: "btn btn-secondary mt-3 rounded" %>
+<% end %>
